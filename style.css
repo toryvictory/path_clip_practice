@@ -1,8 +1,11 @@
 body {
-    min-height: 100vh;
+    --background-value: radial-gradient(circle, rgba(0,157,192,1) 8%, rgba(22,22,22,1) 96%);
 
-    background: rgb(44,158,187);
-    background: radial-gradient(circle, rgba(0,157,192,1) 8%, rgba(22,22,22,1) 96%);
+    min-height: 100vh;
+    background-image: var(--background-value);
+    background-position: top 0;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
 }
 
 .flex-container {
@@ -19,13 +22,14 @@ body {
     --image-size: 150px;
     width: var(--image-size);
     height: var(--image-size);
+
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     overflow: hidden;
 
     margin-top: calc(var(--image-size)/-2);
 
-    background: rgb(44,158,187);
-    background: radial-gradient(circle at bottom, rgba(0,157,192,1) 92%, rgba(22,22,22,1) 96%);
+    background-image: var(--background-value);
+    background-attachment: fixed;
 }
 
 
@@ -35,8 +39,8 @@ body {
 
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     object-fit: cover;
-
 }
+
 .user-info-wrapper {
     border-radius: 10px;
     padding: 10px 15px
